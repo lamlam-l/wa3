@@ -46,25 +46,30 @@
 
     <div class="graph">
       <div class="graph-wrapper">
-        <img :src="TempChartImg" alt=""/>
-        <p>21°C</p>
-      </div>
-      <div class="xAxis">
-        <p class="xAxis__label">11 pm</p>
-        <p class="xAxis__label">1 pm</p>
-        <p class="xAxis__label">11 am</p>
-        <p class="xAxis__label">1 am</p>
+        <img class="graph__image" :src="TempChartImg" alt=""/>
+        <p class="graph__value">21°C</p>
       </div>
       <div class="yAxis">
-        <p class="yAxis__label">14</p>
-        <p class="yAxis__label">16</p>
-        <p class="yAxis__label">18</p>
-        <p class="yAxis__label">20</p>
-        <p class="yAxis__label">22</p>
-        <p class="yAxis__label">24</p>
+        <p class="yAxis__label">11 pm</p>
+        <p class="yAxis__label">1 pm</p>
+        <p class="yAxis__label">11 am</p>
+        <p class="yAxis__label">1 am</p>
+      </div>
+      <div class="xAxis">
+        <p class="xAxis__label">14°</p>
+        <p class="xAxis__label">16°</p>
+        <p class="xAxis__label">18°</p>
+        <p class="xAxis__label">20°</p>
+        <p class="xAxis__label">22°</p>
+        <p class="xAxis__label">24°</p>
       </div>
     </div>
 
+    <div class="info">
+      <p class="info_title">Hanoi City</p>
+      <p class="info_text"> expect partly cloudy skies with occasional sunshine throughout the day. Temperatures are
+        forecasted to range from 20°C to 26°C, providing a comfortable and pleasant environment.</p>
+    </div>
   </div>
 </template>
 
@@ -229,5 +234,62 @@ import TempChartImg from "../assets/tempChart.svg"
 .air-quantity-info__label {
   margin-bottom: 8px;
 }
-</style>
 
+.graph {
+  position: relative;
+}
+
+.graph-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  position: relative;
+  padding: 8px;
+  height: 130px;
+  margin-left: 32px;
+}
+
+.graph__image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
+
+.graph__value {
+  font-size: 24px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #F8DD82;
+}
+
+.yAxis {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  height: 130px;
+  justify-content: space-evenly;
+  font-size: 12px;
+}
+
+.xAxis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-left: 32px;
+}
+
+.info {
+}
+
+.info_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.info_text {
+  font-size: 14px;
+}
+</style>

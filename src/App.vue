@@ -2,6 +2,9 @@
   <main class="main">
     <Sidebar class="main_sidebar"/>
     <div class="main_content">
+      <p>NATIONAL WEATHER</p>
+      <span>Weather forecast</span>
+      <h1>Storm with Heavy Rain</h1>
     </div>
   </main>
 </template>
