@@ -18,7 +18,8 @@ import Sidebar from "./components/sidebar.vue";
 }
 
 .main_sidebar {
-  flex-basis: 18%;
+  flex-basis: 20%;
+  min-width: 250px;
 }
 
 .main_content {
